@@ -198,7 +198,9 @@
         <img src="static/images/Architecture.png" alt="MY ALT TEXT" width="1024" height="768"/>
         <h2 class="subtitle has-text-centered">
           <p style="text-align: justify;">
-            System Architecture.
+            The methodology involves a multi-stage pipeline that integrates object segmentation, depth estimation, and depth-based effect application. Initially, the YOLOv8 instance segmentation model detects and segments objects of interest in each video frame. Simultaneously, the MiDaS model estimates the depth map of the scene, providing pixel-wise depth information. The segmented objects are then analyzed based on their depth and area to determine their eligibility for the 3D enhancement effect. Objects meeting specific depth thresholds are isolated, and zoom effects are applied to simulate depth perception.
+
+To further accentuate the 3D illusion, black vertical bars are added to the background, along with masked horizontal sections at the top and bottom of the frame. These bars serve two purposes: they create a frame-like boundary that enhances the viewer's focus on the foreground objects, simulating a window effect commonly seen in stereoscopic displays, and they reduce peripheral distractions, making the depth cues more prominent. Additionally, geometric transformations, such as resizing and perspective adjustments, are utilized to enhance the illusion of depth. The processed frames are compiled to generate a final video that presents an autostereoscopic 3D-like effect.
           </p>
         </h2>
       </div>
