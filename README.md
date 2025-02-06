@@ -9,6 +9,11 @@ Get-3D is a Python-based project for generating glasses-free 3D videos using dep
 - **3D Effect Application**: Applies zoom effects and masking to simulate 3D depth.
 - **Real-time Video Processing**: Processes frames sequentially with a progress bar.
 
+## Methodology
+The following diagram illustrates the methodology used in Get-3D:
+
+![Methodology](static/images/Get-3d.png)
+
 ## Requirements
 The required dependencies are listed in `requirements.txt`. Install them using:
 
@@ -40,7 +45,7 @@ python Get-3D/script.py
 - Pre-trained YOLOv8 model (`yolov8x-seg.pt`) for instance segmentation.
 
 ### Output
-- A processed 3D-stylized video saved to the specified output path.
+- A processed 3D video saved to the specified output path.
 
 
 ## Acknowledgments
