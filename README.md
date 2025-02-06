@@ -1,47 +1,50 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# Get-3D
 
+## Overview
+Get-3D is a Python-based project for generating glasses-free 3D videos using depth estimation and instance segmentation techniques. It utilizes YOLOv8 for segmentation and MiDaS for depth estimation to apply depth-based effects on objects in a video.
 
-Example project pages built using this template are:
-- https://vision.huji.ac.il/spectral_detuning/
-- https://vision.huji.ac.il/podd/
-- https://dreamix-video-editing.github.io
-- https://vision.huji.ac.il/conffusion/
-- https://vision.huji.ac.il/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad/
-- https://vision.huji.ac.il/deepsim/
+## Features
+- **Instance Segmentation**: Uses YOLOv8 for object segmentation.
+- **Depth Estimation**: Uses MiDaS model to estimate depth.
+- **3D Effect Application**: Applies zoom effects and masking to simulate 3D depth.
+- **Real-time Video Processing**: Processes frames sequentially with a progress bar.
 
+## Requirements
+The required dependencies are listed in `requirements.txt`. Install them using:
 
+```sh
+pip install -r requirements.txt
+```
 
-## Start using the template
-To start using the template click on `Use this Template`.
+### requirements.txt
+```txt
+opencv-python
+numpy
+torch
+ultralytics
+torchvision
+tqdm
+``` 
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+## Usage
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+### Running the Script
+Ensure the paths to your video files and models are correctly specified in the script. Then, execute the script using:
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+```sh
+python Get-3D/script.py
+```
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://pages.cs.huji.ac.il/eliahu-horwitz/](https://pages.cs.huji.ac.il/eliahu-horwitz/)
+### Input
+- A video file (e.g., `wolf.mp4`) that will be processed.
+- Pre-trained YOLOv8 model (`yolov8x-seg.pt`) for instance segmentation.
+
+### Output
+- A processed 3D-stylized video saved to the specified output path.
+
 
 ## Acknowledgments
+This project uses YOLOv8 from [Ultralytics](https://github.com/ultralytics) and MiDaS from [Intel-ISL](https://github.com/intel-isl/MiDaS).
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
 
 ## Website License
