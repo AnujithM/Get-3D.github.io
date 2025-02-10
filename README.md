@@ -1,5 +1,5 @@
 # Get-3D
-
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python) ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-red?style=flat-square&logo=opencv) ![YOLOv8](https://img.shields.io/badge/YOLOv8-Instance%20Segmentation-yellow?style=flat-square) ![MiDaS](https://img.shields.io/badge/MiDaS-Depth%20Estimation-blueviolet?style=flat-square) ![Ultralytics](https://img.shields.io/badge/Ultralytics-YOLO-orange?style=flat-square) ![Torch](https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?style=flat-square&logo=pytorch) ![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=flat-square)
 ## Overview
 Get-3D is a Python-based project for generating glasses-free 3D videos using depth estimation and instance segmentation techniques. It utilizes YOLOv8 for segmentation and MiDaS for depth estimation to apply depth-based effects on objects in a video.
 
